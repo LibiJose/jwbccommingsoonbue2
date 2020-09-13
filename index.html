@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+  <title >JWBC</title>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bgimg {
+  background-image: url(images/B.jpg);
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+}
+img{
+    width:100vw;
+    height: 100vh;
+  }
+
+
+.bottomleft {
+  position:  absolute;
+  bottom: 0px;
+  font-size: 31px;
+  left: 15px;
+  right: 5px;
+
+  font-weight: bold;
+}
+
+.middle {
+  position:  absolute;
+  top: 40%;
+  left: 50%;
+  
+  padding: 0vh;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.imgtitle{
+  width: 100vh;
+  height: 50vh;
+}
+.subtitle{
+  font-size:2rem;
+
+  font-family: Lustria ;
+  letter-spacing: 1px;
+  font-weight: normal;
+}
+
+hr {
+  margin: auto;
+  font-size: xx-large;
+  background-color:black;
+  top: 40%;
+  width: 75%;
+}
+@media only screen and (max-width:  600px) {
+  .bottomleft{
+    text-align: center;
+  bottom: 0px;
+   left: 50px;
+   right:50px;
+   font-size: 20.5px;
+  }
+  .subtitle{
+    font-size:1.8rem;
+  }
+ 
+ .imgtitle{
+   width:100vw;
+   height:30vh;
+   font-size:small;
+ }
+ 
+
+  .middle{
+    top:240px;
+  }
+ 
+  hr{
+    
+    width:60%;
+  }
+}
+
+</style>
+<body>
+
+<div class="bgimg"  >
+
+  <div class="middle">
+   <img class="imgtitle"src="images/jwbc libi.png" >
+ <span class="subtitle" style="color:#e1e2e3;">  Fairytail Luxurious Farm Resort </span>    <hr>
+
+    <p id="demo" style="font-size:30px"></p>
+   <marquee> <h1 class="subtitle">COMMING SOON   </h1></marquee>
+  </div>
+  <div class="bottomleft" >
+    <p style="color: black"> 
+      Whatsapp:+91&nbsp;90&nbsp;1914&nbsp;3177 |
+      Email:Sunichat@gmail.com | 
+      Bangalore ,India
+
+    </p>
+  </div>
+</div>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
+
+// Update the count down every 1 second
+var countdownfunction = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+  
+  // Find the distance between now an the count down date
+  var distance = countDownDate - now;
+  
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "day " + hours + "hr "
+  + minutes + "min " + seconds + "sec ";
+  
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(countdownfunction);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
+</body>
+</html>
